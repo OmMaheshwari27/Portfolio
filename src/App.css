@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  transition: background-color 0.6s cubic-bezier(.4,0,.2,1), color 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #f3f4f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+html.dark ::-webkit-scrollbar {
+  background: #181e29;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f3f4f6;
+}
+html.dark * {
+  scrollbar-color: #374151 #181e29;
+}
